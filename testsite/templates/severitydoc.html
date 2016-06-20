@@ -1,8 +1,10 @@
+{% load staticfiles %}
+
 <html>
  <head>
    <title>Severity Documentation</title>
-		<link rel = "stylesheet" href="newmain.css">
-
+	<!--<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />-->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
   </head>
  <body bgcolor="#E6E6FA">
    <br>

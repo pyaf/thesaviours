@@ -1,7 +1,10 @@
+{% load staticfiles %}
+
  <!DOCTYPE html>
 <html>
 	<head>
-		<link rel = "stylesheet" href="newmain.css" type="text/css"/>
+	<!--<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />-->
+	<link rel="stylesheet" href="{% static 'style.css' %}">
 		<title>Home</title>
 		<br>
 		<br>

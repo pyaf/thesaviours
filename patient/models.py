@@ -7,7 +7,8 @@ class Patients(models.Model):
     location = models.TextField(max_length = 100)
     level = models.IntegerField()
     age = models.IntegerField()
+    gender = models.TextField()
     comment = models.TextField()
     
     def __str__(self):
-        return self.firstname
+        return self.location

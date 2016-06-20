@@ -5,7 +5,7 @@ from patient import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name = 'mainpage'),
-    url(r'^patient/$', views.formpage),
-    url(r'^severitydoc/$', views.doc)
+    url(r'^$', views.index, name = 'Main page'),
+    url(r'^patient/$', views.formpage, name = 'Patient Form'),
+    url(r'^severitydoc/$', views.doc, name = 'Severity Documentation')
 ]

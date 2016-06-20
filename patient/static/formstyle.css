@@ -1,0 +1,134 @@
+/*input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-position: 10px 10px;
+}*/
+
+
+input[type=number], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+input[type=number]:focus {
+    background-color: lightblue;
+}
+
+/*input[type=text] {
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}*/
+
+input[type=text],textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: 10px 10px 0px 100px; 
+
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+/*textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}*/
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 30px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+/*
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}*/
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    position: fixed;
+    top:0;
+    width:100%;
+    padding: 0;
+	overflow: hidden;
+    background-color: #f1f1f1;
+}
+li {
+	float: left;
+	border-right: 1px solid #bbb;
+
+
+}
+li a {
+    display: block;
+    color: #000;
+    text-align:center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+
+}
+.active {
+    background-color: #4CAF50;
+	color :while;
+}
+

@@ -17,4 +17,4 @@ class PatientForm(forms.ModelForm):
     class Meta: #to tell django which model should be used to create this form (model = patient)
         model = Patients
         fields = ('firstname', 'lastname','location',
-        'level','age','comment',)
+        'level','age','comment','gender')

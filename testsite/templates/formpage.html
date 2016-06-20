@@ -1,90 +1,73 @@
-<!--{{ form.as_p }}
-hello
-<p><label for="id_name">
-Name:</label>
-<input class="textinput
-textInput formcontrol" id="id_name"
-maxlength="100" name="name"
-type="text" /></p>
-<p><label for="id_
-age">Age:</label> <input
-class="numberinput formcontrol" id="id_age"
-name="age" type="number"
-/></p>
-
-
-<form method="post">
-{% csrf_token %}
-<table>{{ form.as_table }}</table>
-<input type="submit" value="Submit" />
-</form>
-
--->
-<!--<html>
+{% load staticfiles %}
+<html>
 	<head>
 		<title>The_saviours!</title>
-		<link rel = "stylesheet" href="newmain.css">
+		<link rel="stylesheet" href="{% static 'formstyle.css' %}">
 	</head>
 	<body bgcolor="#E6E6FA">
 		<br>
 		<br>
 		<h1>Welcome to The_saviours!</h1>
 		<h2>A minute saved, a life saved</h2>
-		<p>Enter New patient's detail</p>
-		<form action ="/data_in.php" method="post">
-			<ul>
-            First name:  <input type="text" name= "firstname"><br>
+		<p>Enter New patient's detail :</p>
+		<form action ="/patient/" method="POST">
+            {% csrf_token %}
+			<label for="firstname">First Name :</label>
+			<input type="text" name= "firstname" placeholder="Firstname"><br>
 			<br>
-			Last name:  <input type="text" name="lastname"><br>
+			<label for="lastname">Last Name :</label>
+			<input type="text" name="lastname" placeholder="Lastname"><br>
 			<br>
-			Locaion:  <input type="text" name="location"><br>
+			<label for="location">Location :</label>
+			<input type="text" name="location" placeholder="Location" ><br>
 			<br>
-			Severity level: <input type="number" name="level"><br>
+    		<label for="level">Severity Level :</label>			
+			<select id="level" name="level">
+      			<option value="1">level 1</option>
+      			<option value="2">level 2</option>
+      			<option value="3">level 3</option>
+    		</select>			
 			<br>
-			Age: 
-            <input type="number" name="age"><br>
+			<label for="age">Age :</label>
+            <input type="number" name="age" placeholder="Age"><br>
             <br>
-			Comment:
-			<br>
-			<textarea name="comment" rows="5" cols="40"></textarea>
+			<textarea name="comment" rows="5" cols="40" placeholder="Comments"></textarea>
 			<br>
 			Gender:
 				<input name="gender" value="female" type= "radio"></input>
-			Female |
+			Female 
 				<input name ="gender" value="male" type="radio"></input>
-			Male |
+			Male 
 				<input name ="gender" value="other" type="radio"></input>
 			Other
 		<br>
 		<input type="submit" value="Submit">
 		</form>
-        </ul>
+        
 		<br>
 		<br>
-	<div >
+
 		<nav >
 			<ul>
-				<li><a href="/main">Home</a></li>
-				<li><a href="/severitydoc.html">Serverity documentation</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/severitydoc">Serverity documentation</a></li>
 			</ul>
 		</nav>
-	</div>
-
-	<div style="position: relative; width: 600px; height: 800px;">
-    <div style="position: absolute; bottom: 5px;">
-		AGS PRODUCTION (C)
-    </div>
-	</div>
     </body>
-</html>-->
+</html>
+
+<!--{% load staticfiles %}
 
 {% block content %}
     <h1>New Patient</h1>
-	    <ul>
+		<link rel="stylesheet" href="{% static 'formstyle.css' %}">
+	    <body bgcolor="#E6E6FA">
+
         <form action = "" method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
-        </form>
-	</ul>
-{% endblock %}
+            <input type="submit" value="Submit">
+		</form>
+
+{% endblock %}-->
