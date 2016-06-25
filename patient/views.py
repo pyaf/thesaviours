@@ -11,7 +11,7 @@ def formpage(request):
         form = PatientForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse('THANKS')
+            return render(request,'post_form.html')
         else:
             return HttpResponse('Fill the form correctly')
     else:
