@@ -4,31 +4,60 @@
  <head>
    <title>Severity Documentation</title>
 	<!--<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />-->
-  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'sdocstyle.css' %}">
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   </head>
- <body bgcolor="#E6E6FA">
    <br>
    <br>
-   <h1>Welcome to The_saviours!</h1>
-   <h2>A minute saved, a life saved</h2>
-   <p>Severity Documentation :</p>
-    <li>level 3:Poison affected, Heart attack.</li>
-    <br><br>
-    <li>	level 2:road accidents,severe accident and unconcious </li>
-    <br><br>
-    <li>	level 1: High fever, accidents, patient unable to walk </li>
-	<div >
-   <nav>
-      <ul>
-         <li><a href="/">Home</a></li>
-      </ul>
-   </nav>
-</div>
-<div style="position: relative; width: 600px; height: 800px;">
-    <div style="position: absolute; bottom: 5px;">
-    AGS PRODUCTION (C)
-    </div>
-</div>
-   </form>
+   <div class="mypanel">
+       <h1>Welcome to The_saviours!</h1>
+       <h2>A minute saved, a life saved</h2>
+       <br>
+         <p><b>Severity Documentation :</b></p>
+         <br>
+            <li>level 3 : Poison affected, Heart attack.</li>
+            <br><br>
+            <li>  level 2 : Road accidents,severe accident and unconcious. </li>
+            <br><br>
+            <li>  level 1 : High fever, accidents, patient unable to walk. </li>
+   </div>
+   
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+           <a class="navbar-brand"> 
+            <img alt="The_Saviours" src="/static/icon.png"></a>
+               <a class="navbar-brand">The_Saviours</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myNavbar">
+           <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/"> HOME </a></li>
+                <li class:"active"><a >Severity Documentation</a></li>
+        </ul>
+        </div>
+       </div><!-- /.container-fluid -->
+    </nav>
+      
+   <body >
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
   </body>
+
+  <nav class="navbar-inverse navbar-bottom">
+     <l class="prod" > AGS PRODUCTION (C)</l>
+    </nav>
 </html>
