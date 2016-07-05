@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+ <!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="/static/css/bootstrap-theme.min.css"> 
+		
+	<title>Main</title>
+	<br>
+	<br>
+	<div class="mypanel">
+	<h1>Welcome to The_saviours!</h1>
+	<h2>A minute saved, a life saved</h2>
+	<br><br>
+	<l><b>FOR NEW PATIENT =></l>  <a href="/patient">CLICK HERE</b></a>
+	<br><br>
+	</div>
+	</head>
+		<body bgcolor="#E6E6FA" >
+		<div class="location">
+			<b>Locations of Ambulances in the city:</b>
+		</div>
+		<div id="googleMap"></div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+	  		<div class="container-fluid">
+		    	<div class="navbar-header">
+		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    	</button>
+		     	 <a class="navbar-brand"> 
+			  	  <img alt="The_Saviours" src="/static/img/icon.png"></a>
+		      	   <a class="navbar-brand">The_Saviours</a>
+		    	</div>
+		    	<div class="navbar-collapse collapse" id="myNavbar">
+		     	 <ul class="nav navbar-nav navbar-right">
+ 		             	<li class="active">
+ 		             		<a>Main Page</a>
+ 		             	</li>
+		        		<li>
+		        			<a href="/severitydoc">Severity Documentation</a>
+		        		</li>
+		        		<li>
+		        			<a href="/logout">Logout</a>
+		        		</li>
+	 		 	</ul>
+	 		 	</div>
+	 		 </div>
+		</nav>
+		
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="{% static 'js/map.js' %}" ></script>
+    	<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js" ></script>
+ 		
+ 		</body>
+ 		
+ 		
+<nav class="navbar-inverse navbar-bottom">
+		 <li class="prod" > AGS PRODUCTION (C)</li>
+		</nav>
+</html>

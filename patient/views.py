@@ -2,10 +2,16 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from .forms import PatientForm
+from django.contrib.auth.decorators import login_required
 
-def index(request):
-    return render(request, 'index.html')
+def homepage(request):
+    return render(request,'homepage.html')
 
+@login_required(login_url='login/')
+def  mainpage(request):
+    return render(request, 'mainpage.html')
+
+@login_required(login_url='login/')
 def formpage(request):
     if (request.method == "POST"): #and ("submit" in request):
         form = PatientForm(request.POST)
@@ -18,5 +24,6 @@ def formpage(request):
         form = PatientForm()
         return render(request,'formpage.html',{'form': form})
 
+@login_required(login_url='login/')
 def doc(request):
-    return render(request, 'severitydoc.html')        
+    return render(request, 'severitydoc.html')

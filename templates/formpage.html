@@ -1,74 +1,81 @@
 {% load staticfiles %}
-<html>
-	<head>
-		<title>The_saviours!</title>
-		<link rel="stylesheet" href="{% static 'formstyle.css' %}">
-		<script type="text/javascript" src="{% static 'admin/js/formpage.js' %}"></script>
-	</head>
-	<body bgcolor="#E6E6FA">
-		<br>
-		<br>
-		<h1>Welcome to The_saviours!</h1>
-		<h2>A minute saved, a life saved</h2>
-		<p>Enter New patient's detail :</p>
-		<form action ="/patient/" method="POST">
-            {% csrf_token %}
-			<label for="firstname">First Name :</label>
-			<input type="text" name= "firstname" placeholder="Firstname"><br>
-			<br>
-			<label for="lastname">Last Name :</label>
-			<input type="text" name="lastname" placeholder="Lastname"><br>
-			<br>
-			<label for="location">Location :</label>
-			<input type="text" name="location" placeholder="Location" ><br>
-			<br>
-    		<label for="level">Severity Level :</label>			
-			<select id="level" name="level">
-      			<option value="1">level 1</option>
-      			<option value="2">level 2</option>
-      			<option value="3">level 3</option>
-    		</select>			
-			<br>
-			<label for="age">Age :</label>
-            <input type="number" name="age" placeholder="Age"><br>
-            <br>
-			<textarea name="comment" rows="5" cols="40" placeholder="Comments"></textarea>
-			<br>
-			Gender:
-				<input name="gender" value="female" type= "radio"></input>
-			Female 
-				<input name ="gender" value="male" type="radio"></input>
-			Male 
-				<input name ="gender" value="other" type="radio"></input>
-			Other
-		<br>
-		<input type="submit" value="Submit">
-		</form>
-        
-		<br>
-		<br>
-
-		<nav >
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/severitydoc">Serverity documentation</a></li>
-			</ul>
-		</nav>
-    </body>
-</html>
-
-<!--{% load staticfiles %}
-
 {% block content %}
-    <h1>New Patient</h1>
+<html>
 		<link rel="stylesheet" href="{% static 'formstyle.css' %}">
-	    <body bgcolor="#E6E6FA">
+ 		<!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+		 <link rel="stylesheet" href="/static/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <form action = "" method="POST" class="post-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-            <input type="submit" value="Submit">
-		</form>
 
-{% endblock %}-->
+
+  <nav>
+    <div class="nav-wrapper container">
+      <a class="brand-logo"> The_Saviours</a>
+      <a data-activates="mobile-demo" class="button-collapse">
+      <i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/severitydoc">Severity Documentation</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+        
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="/mainpage">Main page</a></li>
+          <li><a href="/severitydoc">Severity Documentation</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+
+    </div>
+  </nav>
+
+<body>
+
+ <div class="container">
+
+  <form class="form-horizontal center-align card-panel hoverable col s10 l10 " method="post">
+  {% csrf_token %}
+    <fieldset>
+      <br>
+      <h1 class="center-align">New Patient</h1>
+      <br>
+        {% for field in form %}
+          <div class="input-field">{{ field }}
+            <label for= "">{{ field.label }}</label>
+          </div>
+        {% endfor %}
+
+
+    <div class="form-actions">
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i>
+       </button>
+    </fieldset>
+    </div>
+
+
+</form>
+		<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+ 		<script>
+
+    $(".button-collapse").sideNav();
+
+ 		</script>
+
+</div>
+</div>
+</body>
+
+<footer class="page-footer">
+          <div class="container">
+<div class="footer-copyright">
+            <div class="container center-align text-lighten-8">
+            © 2016 Copyright @ AGS Productions
+            </div>
+          </div>
+</div>
+</footer>
+</html>
+{% endblock %}
