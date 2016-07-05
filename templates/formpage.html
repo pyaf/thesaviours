@@ -5,6 +5,7 @@
  		<!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
+<<<<<<< HEAD
 		 <link rel="stylesheet" href="/static/css/materialize.min.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -52,10 +53,60 @@
        <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i>
        </button>
     </fieldset>
+=======
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+		
+<nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo"> The_Saviours</a>
+      <a data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/severitydoc">Severity Documentation</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="/">Home</a></li>
+        <li><a href="/severitydoc">Severity Documentation</a>
+      </ul>
+    </div>
+  </nav>
+<body>
+
+<div class="container">
+
+<form class="form-horizontal center-align card-panel hoverable col s10 l10 " method="post">
+{% csrf_token %}
+    <fieldset>
+        <br>
+        <h1 class="center-align">New Patient</h1>
+        <br>
+        {% for field in form %}
+
+                <div class="input-field">
+                    	{{ field }}
+                    <label for= "">
+                    	{{ field.label }}
+                    </label>
+        
+                </div>
+        {% endfor %}
+    
+
+    <div class="form-actions">
+       <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+        </fieldset>
+>>>>>>> 4d38671cc77080fb64c83a1df018c2d538f3ff1c
     </div>
 
 
 </form>
+<<<<<<< HEAD
 		<script type="text/javascript" src="/static/js/jquery.min.js"></script>
         <script src="/static/js/materialize.min.js"></script>
  		<script>
@@ -69,6 +120,20 @@
 </body>
 
 <footer class="page-footer">
+=======
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+ 		<!-- <script src= "{% static 'form.js'%}"></script> -->
+ 		<script>
+ 			
+    $(".button-collapse").sideNav();
+        
+ 		</script>
+</div>	
+</div>
+</body>
+ <footer class="page-footer">
+>>>>>>> 4d38671cc77080fb64c83a1df018c2d538f3ff1c
           <div class="container">
 <div class="footer-copyright">
             <div class="container center-align text-lighten-8">
@@ -78,4 +143,8 @@
 </div>
 </footer>
 </html>
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+>>>>>>> 4d38671cc77080fb64c83a1df018c2d538f3ff1c

@@ -3,45 +3,62 @@
  <!DOCTYPE html>
 <html>
 	<head>
-	<!--<link rel="stylesheet" href="{{ STATIC_URL }}style.css" />-->
 	<link rel="stylesheet" href="{% static 'style.css' %}">
-		<title>Home</title>
-		<br>
-		<br>
-			<h1>Welcome to The_saviours!</h1>
-			<h2>A minute saved, a life saved</h2>
-		<script src="http://maps.googleapis.com/maps/api/js"></script>
-		<script>
-			function initialize() {
-			var mapProp = {
-			center:new google.maps.LatLng(25.2682211,82.9900223),
-			zoom:13,
-			mapTypeId:google.maps.MapTypeId.ROADMAP
-			};
-			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);//event listener to load the map
-		</script>
-	</head>
-		<body bgcolor="#E6E6FA">
-		<div id="googleMap" style="position: absolute;top:70px; right:50px; width:800px;height:480px;"></div>
-		<br>
-		<l><b>For new patient =></l>  <a href="/patient">Click here</b></a>
-		<br>
-		<br>
-		<l>Location of Ambulances in the city:</l>
-		<p></p>
-		<div>
-			<nav>
-				<ul>
-					<li><a href="/severitydoc">Serverity documentation</a></li>
-				</ul>
-			</nav>
-		</div>
-			<div style="position: relative; width: 600px; height: 800px;">	
-    		<div style="position: absolute; bottom: 5px;">
-    		AGS PRODUCTION (C)
-   	    </div>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/	bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> 
+		
+	<title>Home</title>
+	<br>
+	<br>
+	<div class="mypanel">
+	<h1>Welcome to The_saviours!</h1>
+	<h2>A minute saved, a life saved</h2>
+	<br><br>
+	<l><b>FOR NEW PATIENT =></l>  <a href="/patient">CLICK HERE</b></a>
+	<br><br>
 	</div>
-  </body>
+	</head>
+		<body bgcolor="#E6E6FA" >
+		<div class="location">
+			<b>Locations of Ambulances in the city:</b>
+		</div>
+		<div id="googleMap"></div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+	  		<div class="container-fluid">
+		    	<div class="navbar-header">
+		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    	<span class="icon-bar"></span>
+		    	</button>
+		     	 <a class="navbar-brand"> 
+			  	  <img alt="The_Saviours" src="/static/icon.png"></a>
+		      	   <a class="navbar-brand">The_Saviours</a>
+		    	</div>
+		    	<div class="navbar-collapse collapse" id="myNavbar">
+		     	 <ul class="nav navbar-nav navbar-right">
+ 		             	<li class="active"><a> HOME </a></li>
+		        		<li><a href="/severitydoc">Severity Documentation</a></li>
+	 		 	</ul>
+	 		 	</div>
+	 		 </div><!-- /.container-fluid -->
+		</nav>
+		
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="{% static 'map.js' %}" ></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 		</body>
+ 		
+ 		<!-- <nav class=" navbar-fixed-bottom">
+			<div class="prod">		 
+		 		<li> AGS PRODUCTION (C)</li>
+		 	</div>
+		</nav> -->
+
+<nav class="navbar-inverse navbar-bottom">
+		 <li class="prod" > AGS PRODUCTION (C)</li>
+		</nav>
 </html>
