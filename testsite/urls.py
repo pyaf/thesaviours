@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^mainpage/$', patientviews.mainpage, name='mainpage'),
     url(r'^patient/$', patientviews.formpage, name = 'formpage'),
     url(r'^severitydoc/$', patientviews.doc, name = 'docpage'),
+    url(r'^look/$', patientviews.look)
 ]

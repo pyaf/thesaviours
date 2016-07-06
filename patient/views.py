@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 def homepage(request):
     return render(request,'homepage.html')
 
+def look(request):
+    return render(request, 'lookinside.html')
 @login_required(login_url='login/')
 def  mainpage(request):
     return render(request, 'mainpage.html')

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -15,9 +16,28 @@
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
         <link href="/static/css/pe-icon-7-stroke.css" rel="stylesheet" />
-
+<style type="text/css">
+   body { background:   #323095   !important; } 
+   h1, h5{
+   	color:white !important;
+   }
+   .landing-page{
+   	    padding-top: 20px !important;
+   	    border-radius: 10px !important;
+   }
+   .parallax-background{
+   	padding-top: -100px !important;
+   }
+</style>
+<!-- <style>
+	.parallax-background{
+		margin:0%; !important;
+	}
+</style> -->
+  
     </head>
-    <body class="landing-page landing-page1">
+    
+    <body class="landing-page ">
         <nav class="navbar navbar-transparent navbar-top" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,9 +48,12 @@
                     <span class="icon-bar bar2"></span>
                     <span class="icon-bar bar3"></span>
                     </button>
+                    <br>
+                    
+                    
                     <div class="logo-container">
                             <div class="logo">
-                                <img src="/static/img/icon.png" alt="logo">
+                                <img src="/static/img/icon1.png" alt="logo">
                             </div>
                             <div class="brand">
                              The_Saviours
@@ -56,10 +79,10 @@
                   <!-- gif image  -->
                         </div>
                         <div class="col-md-6 col-md-offset-1">
-                            <div class="description">
-                                <h1> The_Saviours</h1>
+                            <div class="description" >
+                                <h1 style="color: white"> The_Saviours</h1>
                                 <br>
-                                <h5>We at The_Saviours are ready to revamp the current trasportation of Ambulances to a new more efficient and tech-savy level, by adding our extention to the current system.</h5>
+                                <h5 style="color: white">We at The_Saviours are ready to revamp the current trasportation of Ambulances to a new more efficient and tech-savy level, by adding our extention to the current system.</h5>
                             </div>
                         </div>
                     </div>
@@ -79,6 +102,7 @@
                             <div class="description">
                                 <h4 class="header-text">The Current System</h4>
                                 <p>
+                                Patient calls 102, picked up by the ambulance call center. Patient gives his/her information. Call center forwards the information to regional ambulance center. Any random ambulance is alloted the task to serve the patient. After dropping the Patient to the his/her choice of hospital / or to the nearest hospital in case of emergency, ambulance returns to the ambulance center usually located at the govt. hospitals.
                                 </p>
                             </div>
                         </div>
@@ -89,21 +113,25 @@
                 </div>
             </div>
 
-            <div class="section section-demo">
+            <div class="section section-presentation">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 ">
                             <!-- gif -->
                         </div>
                         <div class="col-md-5 col-md-offset-1">
+                        <br><br>
                             <h4 class="header-text">Our Proposed Extention</h4>
                             <p>
-                               Here comes The_Saviours
+                               Patient calls 102, picked up by the ambulance call center. Patient gives his/her information. Call center uploads this information on The_Saviours website. All the ambulance are equipped with Smartphones with The_Saviours Application. The nearest ambulance is identified and is alloted the task to serve the patient. The Ambulance is also alloted the shortest path to the patient through the The_Saviours application. Traffic lights at each crossing are notified about the incoming ambulance as soon as the ambulance reaches under the 300 m threshold, simultaneously traffic lights are changed to give a free way for the lane in which the ambulance stands. The same process repeats itself at each crossing. After dropping the Patient to the his/her choice of hospital / or to the nearest hospital in case of emergency, ambulance doesn not return to the ambulance center, ready for the next service if it is the nearest one.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+			
+
             <div class="section section-features">
                 <div class="container">
                     <h4 class="header-text text-center">Features</h4>
@@ -140,33 +168,33 @@
                     </div>
                 </div>
             </div>
-           
+
+				<div class="section  ">
+				      <!--  	<div class="container">
+				       	<div class="row"> -->
+				       	<div class="card">
+				       		{% include "lookinside.html" %}
+				       	</div>
+<!-- 				       </div>
+				       </div>
+ -->				       </div>
+ <br><br>
+  <div class="section section-purple "></div>
+
             <div class="section section-no-padding">
                 <div class="parallax filter-gradient blue" data-color="blue">
-                    <div class="parallax-background">
-                        <img class ="parallax-background-image" src="assets/img/template/bg3.jpg"/>
+                    <div class="parallax-background" >
+                        <img class ="parallax-background-image" src="/static/img/city.jpg"/>
                     </div>
-                    <div class="info">
-                        <h1>LOG IN</h1>
-                  
-                        <h4>Go ahead and serve the humanity.</h4>
+                    <div class="info"> 
+                    <h1>LOG IN</h1>                 
+                        <h5>Go ahead and serve the humanity.</h5>
                         <a href="/login" class="btn btn-neutral btn-fill btn-lg">Get Started</a>
                     </div>
                 </div>
             </div>
             <footer class="footer">
-                <div class="container">
-                    <div class="social-area pull-right">
-                        <a class="btn btn-social btn-facebook btn-simple">
-                        <i class="fa fa-facebook-square"></i>
-                        </a>
-                        <a class="btn btn-social btn-twitter btn-simple">
-                        <i class="fa fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-social btn-pinterest btn-simple">
-                        <i class="fa fa-pinterest"></i>
-                        </a>
-                    </div>
+                <div class="">
                     <div class="copyright">
                         &copy; 2016 @ AGS Production
                     </div>
@@ -179,4 +207,6 @@
     <script src="/static/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
     <script src="/static/js/bootstrap.js" type="text/javascript"></script>
     <script src="/static/js/awesome-landing-page.js" type="text/javascript"></script>
+
+
 </html>
