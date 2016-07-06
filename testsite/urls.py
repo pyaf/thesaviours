@@ -11,7 +11,7 @@ urlpatterns = [
     # url(r'^login/$', views.login, {'login_template':'login.html', 'authentication_form':LoginForm}),
     url(r'^login/$',views.login,{'template_name':'login.html','authentication_form':LoginForm}),
 
-    url(r'^logout/$', views.logout,{'logout': '/'}),
+    url(r'^logout/$', views.logout,{'next_page': '/'}),
     url(r'^mainpage/$', patientviews.mainpage, name='mainpage'),
     url(r'^patient/$', patientviews.formpage, name = 'formpage'),
     url(r'^severitydoc/$', patientviews.doc, name = 'docpage'),
