@@ -8,7 +8,6 @@ from patient.forms import LoginForm
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', patientviews.homepage, name = 'homepage'),
-    # url(r'^login/$', views.login, {'login_template':'login.html', 'authentication_form':LoginForm}),
     url(r'^login/$',views.login,{'template_name':'login.html','authentication_form':LoginForm}),
 
     url(r'^logout/$', views.logout,{'next_page': '/'}),
